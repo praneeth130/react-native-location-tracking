@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, Platform, Dimensions } from 'react-native';
-import { MapView, Constants, Location } from 'expo';
+import Constants from 'expo-constants';
+import * as Location from 'expo-location';
+import MapView from 'react-native-maps';
 import CheckLocation from '../components/Permission';
 import MapViewDirections from 'react-native-maps-directions';
 import Loader from '../components/Loader';
@@ -37,6 +39,8 @@ export default class Map extends React.Component {
       coordinate: new AnimatedRegion({
         latitude: null,
         longitude: null,
+        latitudeDelta: 0,
+        longitudeDelta: 0,
       }),
     };
   }

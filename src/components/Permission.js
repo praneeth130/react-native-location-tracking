@@ -1,6 +1,6 @@
 import React from 'react';
 import { Alert } from 'react-native';
-import { Permissions } from 'expo';
+import * as Permissions from 'expo-permissions';
 
 const requestLocationPermission = async () => {
   const { status } = await Permissions.askAsync(Permissions.LOCATION);

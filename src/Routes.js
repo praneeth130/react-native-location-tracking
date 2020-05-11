@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStackNavigator } from 'react-navigation';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 import HomeScreen from './screens/Home';
 import MapScreen from './screens/Map';
 
@@ -12,6 +12,6 @@ const RootStack = createStackNavigator({
   },
 });
 
-const Routes = () => <RootStack />;
+const Routes = createAppContainer(RootStack);
 
 export default Routes;
